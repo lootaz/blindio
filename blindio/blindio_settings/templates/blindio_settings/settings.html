@@ -1,0 +1,27 @@
+{% extends "blindio_common/base.html" %}
+{% block head %}
+    {% load static %}
+    <script src="{% static 'js/blindio/settings.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        {% for setting in settings %}
+        {% if setting.active %}
+        <li role="presentation" class="active"><a>{{ setting.label }}</a></li>
+        {% else %}
+        <li role="presentation"><a href="{{ setting.href }}">{{ setting.label }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% for setting in settings %}
+    {% if setting.active %}
+    <div class="container-fluid blindio-tab-content">
+        {% include setting.template_name %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

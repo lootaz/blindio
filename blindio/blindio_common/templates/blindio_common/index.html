@@ -1,0 +1,8 @@
+{% extends "blindio_common/base.html" %}
+{% block content %}
+{% if not user.is_authenticated %}
+Login to start work
+{% else %}
+Welcome a board
+{% endif %}
+{% endblock %}

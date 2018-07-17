@@ -1,0 +1,21 @@
+.blindio-alert {
+    display: none;
+}
+
+.blindio-alert-top {
+    position:fixed;
+    top: 5px;
+    left: 2%;
+    width: 96%;
+}
+
+.blindio-alert-bottom {
+    position:fixed;
+    bottom: 5px;
+    left: 2%;
+    width: 96%;
+}
+
+.blindio-tab-content {
+    padding: 10px;
+}

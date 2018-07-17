@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="container-fluid col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                Server
+                <div class="btn-group pull-right " role="group">
+                    <button type="button" class="btn btn-success btn-xs">Cancel</button>
+                    <button type="button" class="btn btn-danger btn-xs" onclick="blindioSavePacsServerSetting()">Save</button>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="blindio__settings_pacs_server_port__input" id="blindio__settings_pacs_server_aetitle__label">AE Title</label>
+                        <input type="text" class="form-control" id="blindio__settings_pacs_server_aetitle__input"
+                               placeholder="AE Title"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="blindio__settings_pacs_server_port__input" id="blindio__settings_pacs_server_host__label">Host</label>
+                        <input type="text" class="form-control" id="blindio__settings_pacs_server_host__input"
+                               placeholder="Host"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="blindio__settings_pacs_server_port__input" id="blindio__settings_pacs_server_port__label">Port</label>
+                        <input type="text" class="form-control" id="blindio__settings_pacs_server_port__input"
+                               placeholder="Port"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                Client
+                <div class="btn-group pull-right" role="group">
+                    <button type="button" class="btn btn-success btn-xs">Cancel</button>
+                    <button type="button" class="btn btn-danger btn-xs" onclick="blindioSavePacsClientSetting()">Save</button>
+                </div>
+
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="blindio__settings_pacs_client_port__input" id=id="blindio__settings_pacs_client_aetitle__label">AE Title</label>
+                        <input type="text" class="form-control" id="blindio__settings_pacs_client_aetitle__input"
+                               placeholder="AE Title"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="blindio__settings_pacs_client_port__input" id="blindio__settings_pacs_client_port__label">Port</label>
+                        <input type="text" class="form-control" id="blindio__settings_pacs_client_port__input"
+                               placeholder="Port"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

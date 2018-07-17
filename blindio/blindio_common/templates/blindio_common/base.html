@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Blind IO</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link href="{% static 'css/bootstrap/v3.3.7/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'css/blindio/style.css' %}" rel="stylesheet" media="screen">
+    <!--<link href="{% static '/css/jquery.dataTables.min.css' %}" rel="stylesheet"/>-->
+    <!--<link href="{% static '/css/prism-fulllang.css' %}" rel="stylesheet"/>-->
+    <!--<link href="{% static '/css/jstree/style.min.css' %}" rel="stylesheet"/>-->
+
+    <!--<script src="{% static 'js/moment.min.js' %}"></script>-->
+    <script src="{% static 'js/jquery/v3.3.1/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/v3.3.7/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/blindio/script.js' %}"></script>
+
+    <!--<script src="{% static '/js/jquery.dataTables.min.js' %}"></script>-->
+    <!--<script src="{% static '/js/prism-fulllang.js' %}"></script>-->
+    <!--<script src="{% static 'js/jstree.min.js' %}"></script>-->
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+{% csrf_token %}
+{% block navigation %}
+{% include "blindio_common/top_menu.html" %}
+{% endblock %}
+<div class="container-fluid">
+    {% block content %}
+    {% endblock %}
+</div>
+
+{% if alert_message %}
+<script type="text/javascript">
+    window.onload = function() {
+        blindioShowAlert("{{ alert_message.content }}", "{{ alert_message.class }}", {{ alert_message.hide_delay }} );
+       }
+
+</script>
+{% endif %}
+<div id="blindio__alert_message" class="blindio-alert blindio-alert-bottom alert" role="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <span id="blindio__alert_message__content"></span>
+</div>
+</body>
+</html>
